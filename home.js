@@ -30,7 +30,7 @@ $("#kedatangan").change(function () {
 });
 
 function updateTimer() {
-  future = Date.parse("aug 06, 2022 11:30:00");
+  future = Date.parse("sept 04, 2022 12:00:00");
   now = new Date();
   diff = future - now;
 
