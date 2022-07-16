@@ -14,7 +14,7 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
-<body id="body" onclick="playaudio();">
+<body onclick="playaudio();">
     <div class="page-content-scroll">
         <div class="cover-class cover-bg-1">
         </div>
@@ -34,8 +34,6 @@
 
     </div>
     <!--============END TIMER================-->
-
-
     </div>
     <!-- toolbar bottom -->
     <div class="toolbar">
@@ -251,9 +249,15 @@
             let audio = new Audio("https://bariyyahfahmi.kahwin.me/Salut.mp3");
             audio.play();
         }
+
         function playaudio() {
-            const modal = document.getElementById("body");
-            play();
+            let hasPlayed = false
+            // const modal = document.getElementById("body");
+            if (!hasPlayed) {
+                play();
+                hasPlayed = true
+            }
+
         }
     </script>
 </body>
