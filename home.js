@@ -14,12 +14,21 @@ form.addEventListener("submit", (e) => {
     });
 });
 
-var audio = document.getElementById("audio");
-function LoadOnce() {
-  window.location.reload();
+// var audio = document.getElementById("audio");
+// function LoadOnce() {
+//   window.location.reload();
+//   audio.play();
+// }
+
+function play() {
+  let audio = new Audio("https://bariyyahfahmi.kahwin.me/Salut.mp3");
   audio.play();
 }
-
+function hideModal() {
+  const modal = document.getElementById("modal-covid");
+  modal.classList.add("hide");
+  play();
+}
 // window.onload = function () {
 //   audio.play();
 // };

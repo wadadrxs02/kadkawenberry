@@ -14,29 +14,26 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
-<body>
+<body id="body" onclick="playaudio();">
     <div class="page-content-scroll">
         <div class="cover-class cover-bg-1">
         </div>
         <div class="cover-class2 cover-bg-2">
         </div>
-        <div>
-            <audio controls src="Salut.mp3" autoplay id="audio">
-
-        </div>
-        <!-- ============ START TIMER ================ -->
-        <div class="timer-countdown cover-class3">
-            <div class="outside">
-                <div class="inside" style="text-align: center;">
-                    <br>
-                    <h3></h3>
-                    <div class="timer-style" id="timer">
-                    </div>
+    </div>
+    <!-- ============ START TIMER ================ -->
+    <div class="timer-countdown cover-class3">
+        <div class="outside">
+            <div class="inside" style="text-align: center;">
+                <br>
+                <h3></h3>
+                <div class="timer-style" id="timer">
                 </div>
             </div>
-
         </div>
-        <!--============END TIMER================-->
+
+    </div>
+    <!--============END TIMER================-->
 
 
     </div>
@@ -249,6 +246,16 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script src="home.js"></script>
+    <script>
+        function play() {
+            let audio = new Audio("https://bariyyahfahmi.kahwin.me/Salut.mp3");
+            audio.play();
+        }
+        function playaudio() {
+            const modal = document.getElementById("body");
+            play();
+        }
+    </script>
 </body>
 
 </html>
