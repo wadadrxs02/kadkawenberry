@@ -20,32 +20,6 @@ form.addEventListener("submit", (e) => {
 //   audio.play();
 // }
 
-function play() {
-  let audio = new Audio("https://bariyyahfahmi.kahwin.me/Salut.mp3");
-  audio.play();
-}
-function hideModal() {
-  const modal = document.getElementById("modal-covid");
-  modal.classList.add("hide");
-  play();
-}
-// window.onload = function () {
-//   audio.play();
-// };
-
-let hasPlayed = false;
-function handleFirstPlay(event) {
-  if (hasPlayed === false) {
-    hasPlayed = true;
-
-    let audio = event.target;
-
-    audio.play();
-
-    // Start whatever you need to do after first playback has started
-  }
-}
-
 $("#kedatangan").change(function () {
   if ($(this).val() == "hadir") {
     $("#jumlahkedatanganform").show();

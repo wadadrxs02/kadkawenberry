@@ -11,9 +11,31 @@
     <script src="jquery.nicescroll.js"></script>
     <link href="index.css" rel="stylesheet" type="text/css" />
     <!--component-css-->
-
-
     <link rel="icon" href="images/icons/rings.png">
+    <style>
+        .modal {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #eae0d8;
+            text-align: center;
+            padding: 2em;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .modal-container {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
 
 <body>
@@ -22,6 +44,24 @@
         <iframe src="home.html" style="width:100vw;height:100vh" class="size_frame"></iframe>
     </div>
 
+    <div class="modal-container" id="modal-covid" onclick="hideModal();">
+        <div class="modal">
+            <h1>Important</h1>
+            Please follow COVID-19 guideline! <br>
+        </div>
+    </div>
+
 </body>
+<script>
+    function play() {
+        let audio = new Audio("https://bariyyahfahmi.kahwin.me/Salut.mp3");
+        audio.play();
+    }
+    function hideModal() {
+        const modal = document.getElementById('modal-covid')
+        modal.classList.add('hide')
+        play()
+    }
+</script>
 
 </html>
