@@ -14,6 +14,12 @@ form.addEventListener("submit", (e) => {
     });
 });
 
+var audio = document.getElementById("audio");
+
+window.onload = function () {
+  audio.play();
+};
+
 $("#kedatangan").change(function () {
   if ($(this).val() == "hadir") {
     $("#jumlahkedatanganform").show();
