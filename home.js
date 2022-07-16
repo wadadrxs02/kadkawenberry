@@ -15,10 +15,27 @@ form.addEventListener("submit", (e) => {
 });
 
 var audio = document.getElementById("audio");
-
-window.onload = function () {
+function LoadOnce() {
+  window.location.reload();
   audio.play();
-};
+}
+
+// window.onload = function () {
+//   audio.play();
+// };
+
+let hasPlayed = false;
+function handleFirstPlay(event) {
+  if (hasPlayed === false) {
+    hasPlayed = true;
+
+    let audio = event.target;
+
+    audio.play();
+
+    // Start whatever you need to do after first playback has started
+  }
+}
 
 $("#kedatangan").change(function () {
   if ($(this).val() == "hadir") {
@@ -65,6 +82,3 @@ function updateTimer() {
     "<span>Seconds</span></div>";
 }
 setInterval("updateTimer()", 1000);
-
-var aud = document.getElementById("myAudio");
-aud.volume = 0.1;
